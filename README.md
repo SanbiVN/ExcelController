@@ -41,7 +41,11 @@
 1. Chỉ cần gõ hàm, thêm tùy chọn để tìm kiếm.​
 2. Tìm trong vùng ô hoặc cả trang tính​
 3. Tìm được cấu trúc văn bản phức tạp với Biểu thức chính quy.​
-​
+4. Thay thế không làm hỏng định dạng phông chữ.​
+5. Tìm và thay thế cả công thức và chuỗi trong ô Excel.​
+6. Thay thế không làm ảnh hưởng chế độ Undo và Redo của Excel.​
+
+   
 #### Hướng dẫn sử dụng:
 Hàm: =REPX(Finds, Replace (Mặc định là rỗng), Arguments,...)​
 Cách viết hàm nhanh, gõ vào ô chuỗi =REPX và ấn tổ hợp phím Ctrl+Shift+A​
@@ -51,3 +55,13 @@ Cách viết hàm nhanh, gõ vào ô chuỗi =REPX và ấn tổ hợp phím Ctr
 - Replace	Chuỗi cần thay thế
 - bGlobal	Tìm toàn bộ hoặc chỉ 1
 - matchCase	Có phân biệt ký tự Hoa thường
+
+  Gõ hàm vào một ô bất kì sẽ tìm cả trang tính, hoặc chọn một vùng ô và nhập hàm tìm kiếm.
+Hàm không làm ảnh hưởng đến chế độ Undo của Excel. Nếu sau khi thay thế không đúng thì có thể Undo trở lại.
+
+#### Ví dụ sử dụng hàm REPX:
+1. Tìm ký tự không phải số và thay thế thành rỗng: =REPX("\D")​
+2. Tìm xóa các ký tự số: =REPX("\d")​
+3. Tìm chuỗi ABC thay thế thành 123: =REPX("ABC", "123")​
+4. Xóa khoảng trắng trước và sau chuỗi: =REPX(" +$|^ +")​
+5. Xóa ký tự xuống dòng và thay thế thành cách: =REPX("\n", " ")​
